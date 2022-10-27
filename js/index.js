@@ -39,10 +39,10 @@ for (let i = hacker2.length; i > 0; i--) {
 console.log(hacker2Reverse);
 
 //3.3 Lexicographic Order
-let sortHacker = '$hacker1'.localeCompare('hacker2');
+let sortHacker = hacker1.localeCompare(hacker2);
 if (sortHacker < 0) {
     console.log('The driver\'s name goes first');
-} else if (sorthacker > 0) {
+} else if (sortHacker > 0) {
     console.log('Yo, the navigator goes first definitely')
 } else (console.log('What?! You both have the same name?')
 )
