@@ -74,17 +74,17 @@ console.log(wordEt);
 
 let phraseToCheck = "a man, a plan, a canal, panama";
 // let phraseToCheck = prompt("Escribe tu frase")
-let phraseNoSpaces = "";
-let phraseReverse = "";
 
 // phrase without symbols; and lowercased
+let phraseNoSpaces = "";
 for (let i=0; i < phraseToCheck.length; i++) {
-    if (phraseToCheck[i] !== " " && phraseToCheck[i] !== ",") {
+        if (phraseToCheck[i] !== " " && phraseToCheck[i] !== ",") {
         phraseNoSpaces += phraseToCheck[i].toLowerCase();
     }
 };
 
 // phrase reversed
+let phraseReverse = "";
 for (let i = phraseNoSpaces.length; i > 0; i--) {
     phraseReverse += phraseNoSpaces[i-1];
 };
@@ -94,4 +94,18 @@ if (phraseNoSpaces === phraseReverse) {
     console.log("It's a palindrome!");
 } else ( 
     console.log("Try again!")
-);
+    );
+    
+/* better option to erase symbols and space
+    
+let phraseNoSymbols = phraseToCheck.replace(/[^a-zA-Z]/g, "")
+for (let i = phraseNoSymbols.length; i > 0; i--) {
+    phraseReverse += phraseNoSymbols[i-1];
+}; 
+
+if (phraseNoSymbols === phraseReverse) {
+    console.log("It's a palindrome!");
+} else ( 
+    console.log("Try again!")
+    );
+*/
